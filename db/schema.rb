@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_29_193552) do
+ActiveRecord::Schema.define(version: 2022_05_29_211007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "department_projects", id: false, force: :cascade do |t|
+    t.bigint "project_id"
+    t.bigint "department_id"
+    t.index ["department_id"], name: "index_department_projects_on_department_id"
+    t.index ["project_id"], name: "index_department_projects_on_project_id"
+  end
 
   create_table "departments", force: :cascade do |t|
     t.string "name"
@@ -25,6 +32,12 @@ ActiveRecord::Schema.define(version: 2022_05_29_193552) do
     t.string "name"
     t.string "job_title"
     t.integer "department_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
