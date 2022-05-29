@@ -15,17 +15,17 @@ ActiveRecord::Schema.define(version: 2022_05_29_211007) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "department_projects", id: false, force: :cascade do |t|
-    t.bigint "project_id"
-    t.bigint "department_id"
-    t.index ["department_id"], name: "index_department_projects_on_department_id"
-    t.index ["project_id"], name: "index_department_projects_on_project_id"
-  end
-
   create_table "departments", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "departments_projects", id: false, force: :cascade do |t|
+    t.bigint "project_id"
+    t.bigint "department_id"
+    t.index ["department_id"], name: "index_departments_projects_on_department_id"
+    t.index ["project_id"], name: "index_departments_projects_on_project_id"
   end
 
   create_table "employees", force: :cascade do |t|
