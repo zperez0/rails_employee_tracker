@@ -7,4 +7,4 @@ WIP:
 
 
 #### Database Schema
-![schema image](/app/assests/images/employee_schema.png)
+![schema image](/app/assets/images/employee_schema.png)
