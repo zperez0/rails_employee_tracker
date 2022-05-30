@@ -1,24 +1,10 @@
-# README
+# Employee Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+WIP:
 
-Things you may want to cover:
+* redo database: drop departments_projects join table
+* update model and spec files
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Database Schema
+![schema image](/app/assests/images/employee_schema.png)
