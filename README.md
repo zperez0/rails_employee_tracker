@@ -2,10 +2,6 @@
 
 WIP:
 
-* redo database: drop departments_projects join table
-drop department table
-
-
 drop add_foreign_key 
 * update model and spec files
 
